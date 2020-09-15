@@ -3,16 +3,25 @@
   !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
 </script>
 <style>
-  .container {
-  display: flex;
-  justify-content: center;
+.iframe-container {
+  overflow: hidden;
+  /* 16:9 aspect ratio */
+  padding-top: 56.25%;
+  position: relative;
 }
-.center {
-  width: 800px;
-  }
+
+.iframe-container iframe {
+   border: 0;
+   height: 100%;
+   left: 0;
+   position: absolute;
+   top: 0;
+   width: 100%;
+}
 </style> 
-<div class="container">
-<div class="center">
-<iframe width="640" height="480" src="https://rtsp.me/embed/6Fs98AkZ/" frameborder="0" allowfullscreen></iframe>
+
+<div class="iframe-container">
+  <iframe src="https://rtsp.me/embed/6Fs98AkZ/" allowfullscreen></iframe>
 </div>
-</div>
+
+
